@@ -20,6 +20,10 @@ public class Main {
 
 		if (Price > Paid) {
 			System.out.println("You do not have enough, please try again later");
+			System.exit(0);
+		} else if (Price - Paid == 0) {
+			System.out.println("You are owed no change");
+			System.exit(0);
 		} else {
 			Due = (Paid - Price);
 			System.out.println("You are owed $" + Due);
@@ -93,8 +97,6 @@ public class Main {
 			System.out.println(Nickels + " Nickel(s)");
 
 		}
-		if (Hundreds == 0 && Fifties == 0 && Twenties == 0 && Tens == 0 && Fives == 0 && Twos == 0 && Ones == 0
-				&& Quarters == 0 && Dimes == 0 && Nickels == 0);
-			System.out.println("You are owed no change");
+
 	}
 }
