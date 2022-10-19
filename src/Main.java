@@ -14,8 +14,9 @@ public class Main {
 		double Due = 0.0;
 		System.out.println("What is the cost of all your items?");
 		double Price = in.nextDouble();
-		System.out.println("How much did you pay?");
+		System.out.println("Your total is " + Math.round(Price * 100) / 100.0 + " How much did you pay?");
 		double Paid = in.nextDouble();
+		Paid = Math.round(Paid * 100) / 100.0;
 		in.close();
 
 		if (Price > Paid) {
@@ -50,7 +51,7 @@ public class Main {
 		int Nickels = (int) (Due / 0.05);
 		Due = (Due - Nickels * 0.05);
 
-		if (Due >= 0.01 && Due <= 0.04) {
+		if (Due >= 0.03 && Due <= 0.04) {
 			Nickels++;
 		}
 
